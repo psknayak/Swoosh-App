@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#66000000" />
+    <stroke android:color="@android:color/background_light"
+        android:width="2dp" />
+
+
+    <!-- 64 represents opacity level which is 40% -->
+    <!-- Lookup "hex value opacity levels -->
+</shape>
