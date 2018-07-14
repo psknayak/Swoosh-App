@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/welcomescreenbg" />
+        app:srcCompat="@drawable/welcomescreenbg"
+        android:contentDescription="@string/background_image" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -30,7 +31,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/swooshlogo" />
+        app:srcCompat="@drawable/swooshlogo"
+        android:contentDescription="@string/app_logo" />
 
     <TextView
         android:id="@+id/textView"
@@ -40,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/montserrat"
-        android:text="GO ALL IN"
+        android:text="@string/go_all_in"
         android:textAlignment="viewEnd"
         android:textColor="@android:color/white"
         android:textSize="46sp"
@@ -55,7 +57,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:fontFamily="@font/montserrat"
-        android:text="ON GOING ALL OUT"
+        android:text="@string/on_going_all_out"
         android:textAlignment="viewEnd"
         android:textColor="@android:color/white"
         android:textSize="23sp"
@@ -64,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/getStarted"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="0dp"
         android:layout_height="48dp"
@@ -74,7 +76,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/swoosh_main"
         android:fontFamily="@font/montserrat"
-        android:text="get started"
+        android:text="@string/get_started"
         android:textColor="@android:color/white"
         android:textSize="16sp"
         android:visibility="visible"
@@ -93,7 +95,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/montserrat"
         android:singleLine="false"
-        android:text="Find a team in your city and dominate the league."
+        android:text="@string/find_a_team_in_your_city_and_dominate_the_league"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
