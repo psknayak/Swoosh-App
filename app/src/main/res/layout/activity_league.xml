@@ -60,12 +60,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/mensToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onMensClicked"
             android:text="@string/men_s"
             android:textColor="@android:color/white"
             android:textOff="@string/men_s"
@@ -75,13 +76,14 @@
             tools:layout_editor_absoluteY="258dp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/womensToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onWomensClicked"
             android:text="@string/women_s"
             android:textColor="@android:color/white"
             android:textOff="@string/women_s"
@@ -89,12 +91,13 @@
             android:textSize="16sp" />
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/kidsToggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/swoosh_toggle"
             android:fontFamily="@font/montserrat"
+            android:onClick="onKidsClicked"
             android:text="@string/kid_s"
             android:textColor="@android:color/white"
             android:textOff="@string/kid_s"
