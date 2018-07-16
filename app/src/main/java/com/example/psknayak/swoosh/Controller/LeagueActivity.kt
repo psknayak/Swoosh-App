@@ -1,9 +1,11 @@
-package com.example.psknayak.swoosh
+package com.example.psknayak.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.psknayak.swoosh.Utilities.EXTRA_LEAGUE
+import com.example.psknayak.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {

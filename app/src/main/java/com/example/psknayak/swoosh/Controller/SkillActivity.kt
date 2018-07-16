@@ -1,9 +1,12 @@
-package com.example.psknayak.swoosh
+package com.example.psknayak.swoosh.Controller
 
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.psknayak.swoosh.Utilities.EXTRA_LEAGUE
+import com.example.psknayak.swoosh.R
+import com.example.psknayak.swoosh.Utilities.EXTRA_SKILL
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity()
@@ -14,7 +17,6 @@ class SkillActivity : BaseActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
         league = intent.getStringExtra(EXTRA_LEAGUE)
-        println(league)
     }
 
     fun onBeginnerClicked(view: View)
@@ -33,8 +35,14 @@ class SkillActivity : BaseActivity()
 
     fun finishClicked(view: View)
     {
-        if(selectedSkill==="")
-            Toast.makeText(this, "Please mention your skill level.", Toast.LENGTH_SHORT).show()
+        if(selectedSkill!="") {
+            val finishActivity = Intent(this, FinishActivity::class.java)
+            finishActivity.putExtra(EXTRA_LEAGUE,league)
+            finishActivity.putExtra(EXTRA_SKILL,selectedSkill)
+            startActivity(finishActivity)
+        }
+        else
+            Toast.makeText(this, "Please mention your skill level", Toast.LENGTH_SHORT).show()
     }
 }
 

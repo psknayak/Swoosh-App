@@ -1,4 +1,4 @@
-package com.example.psknayak.swoosh
+package com.example.psknayak.swoosh.Controller
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
