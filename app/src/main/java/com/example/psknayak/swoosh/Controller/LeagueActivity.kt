@@ -4,13 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.psknayak.swoosh.Utilities.EXTRA_LEAGUE
+import com.example.psknayak.swoosh.Model.Player
 import com.example.psknayak.swoosh.R
+import com.example.psknayak.swoosh.Utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    var player = Player("","")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_league)
@@ -20,7 +21,7 @@ class LeagueActivity : BaseActivity() {
         womensToggle.isChecked = false
         kidsToggle.isChecked = false
 
-        selectedLeague = "Men's"
+        player.league = "Men's"
 
     }
 
@@ -28,20 +29,20 @@ class LeagueActivity : BaseActivity() {
         mensToggle.isChecked = false
         kidsToggle.isChecked = false
 
-        selectedLeague = "Women's"
+        player.league = "Women's"
     }
 
     fun onKidsClicked(view: View) {
         mensToggle.isChecked = false
         womensToggle.isChecked = false
 
-        selectedLeague = "Kid's"
+        player.league = "Kid's"
     }
 
     fun leagueNextClicked(view: View) {
-        if (selectedLeague != "") {
+        if (player.league != "") {
             val skillActivity = Intent(this, SkillActivity::class.java)
-            skillActivity.putExtra(EXTRA_LEAGUE,selectedLeague)
+            skillActivity.putExtra(EXTRA_PLAYER,player)
             startActivity(skillActivity)
         }
         else
